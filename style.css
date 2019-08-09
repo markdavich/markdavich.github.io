@@ -1,0 +1,88 @@
+:root {
+  --main-width: 61.8vw;
+  --gr-height: calc(0.618 * var(--main-width))
+  /* --bw: 2px;
+  --bc: black; */
+}
+
+body {
+  background-color: rgb(93, 93, 89);
+}
+
+.main {
+  /* border: solid rgba(251, 255, 33, 0.5) 3px; */
+  margin: auto;
+  width: var(--main-width);
+}
+
+.gr {
+  background-color: gold;
+  height: var(--gr-height);
+  border: solid var(--bc) var(--bw);
+}
+
+.h-flex {
+  border: dotted black 2px;
+  width: 100%;
+  display: flex;
+  align-self: stretch;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.hfi-1 {
+  border: solid rgb(255, 79, 246) 1px;
+  flex-grow: 0.618;
+}
+
+.hfi-2 {
+  border: solid rgb(0, 180, 60) 1px;
+  flex-grow: .382;
+}
+
+.v-flex {
+  height: 100%;
+  border: solid black 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+h100 {
+  height: 50px;
+}
+
+w100 {
+  width: 100%;
+}
+
+.vfi-1 {
+  border: solid rgb(187, 0, 0) 1px;
+  flex-grow: 0.618;
+}
+
+.vfi-2 {
+  border: solid rgb(156, 65, 209) 1px;
+  flex-grow: .382;
+}
+
+/* .bl {
+  border-left: solid var(--bc) calc(var(--bw) / 2);
+}
+
+.bt {
+  border-top: solid var(--bc) calc(var(--bw) / 2);
+}
+
+.bb {
+  border-bottom: solid var(--bc) calc(var(--bw) / 2);
+}
+
+.br {
+  border-right: solid var(--bc) calc(var(--bw) / 2);
+} */
+
+
+/* * {
+  outline: solid salmon 1px;
+} */
