@@ -1,0 +1,135 @@
+
+:root {
+  --main-width: 61.8vw;
+  --gr-height: calc(0.618 * var(--main-width));
+  --bw: 1px;
+  --bc: rgba(128, 65, 65, 0);
+
+  --bsh: 8px;
+  --bsv: 8px;
+  --bsb: 4px;
+  --bsc: rgba(0, 0, 0, 0.418);
+  --grc: rgba(31, 118, 200, 0.246);
+
+  --bdr: solid;
+}
+
+
+
+body {
+  background-color: rgba(54, 54, 54, 0.856);
+}
+
+.main {
+  /* border: solid rgba(251, 255, 33, 0.5) 3px; */
+  margin: auto;
+  height: var(--gr-height);
+  width: var(--main-width);
+}
+
+.gr {
+  /* background-color: gold; */
+  border: var(--bdr) var(--bc) var(--bw);
+}
+
+.h-flex {
+  border: dotted black 1px;
+  /* border-radius: 50%; */
+  display: flex;
+  background-color:var(--grc);
+  width: 100%;
+  flex-direction: row;
+  align-items: stretch;
+}
+
+.hfi-1 {
+  border: solid rgb(255, 79, 246) 1px;
+  flex-grow: 0.618;
+  /* border-radius: 50%; */
+}
+
+.hfi-2 {
+  border: solid rgb(0, 180, 60) 1px;
+  flex-grow: .382;
+  /* border-radius: 50%; */
+}
+
+.gr.h-flex{
+  border-top-left-radius: 100%;
+}
+
+.v-flex {
+  /* border-radius: 100%; */
+  height: 100%;
+  background-color: var(--grc);
+  /* border: solid black 1px; */
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+h100 {
+  height: 50px;
+}
+
+w100 {
+  width: 100%;
+}
+
+.vfi-1 {
+  /* border: solid rgb(187, 0, 0) 1px; */
+  /* background-color: rgba(194, 89, 255, 0.294); */
+  flex-grow: 0.618;
+  border-radius: 50%;
+}
+
+.vfi-2 {
+  /* border: solid rgb(156, 65, 209) 1px; */
+  flex-grow: .382;
+  border-radius: 50%;
+}
+
+.bl {
+  border-left: var(--bdr) var(--bc) calc(var(--bw) / 2);
+}
+
+.bt {
+  border-top: var(--bdr) var(--bc) calc(var(--bw) / 2);
+}
+
+.bb {
+  border-bottom: var(--bdr) var(--bc) calc(var(--bw) / 2);
+}
+
+.br {
+  border-right: var(--bdr) var(--bc) calc(var(--bw) / 2);
+}
+
+.bsr {
+  box-shadow: var(--bsh) 0 var(--bsb) var(--bsc);
+}
+
+.bsl {
+  box-shadow: calc(var(--bsh) * -1) 0 var(--bsb) var(--bsc);
+}
+
+.bsb {
+  box-shadow: 0 var(--bsv) var(--bsb) var(--bsc);
+}
+
+.bst {
+  box-shadow: 0 calc(var(--bsv) * -1) var(--bsb) var(--bsc);
+}
+
+.bslst {
+  box-shadow: 3px 0 2px rgba(0, 0, 0, 0.472)
+}
+
+.brtl {
+  border-top-left-radius: 100px;
+}
+
+/* 
+* {
+  outline: solid salmon 1px;
+} */
