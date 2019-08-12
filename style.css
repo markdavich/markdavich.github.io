@@ -10,11 +10,13 @@
 
   --bsh: 16px; 
   --bsv: 16px;
-  --bsb: 32px;
-  --bsc: rgba(0, 0, 0, 0.329);
+  --bsb: 23px;
+  --bsc: rgba(0, 0, 0, 0.376);
   --grc: rgba(31, 118, 200, 0.246);
 
   --bdr: solid;
+
+  --content-height: 3000px;
 }
 
 /* 8, 8, 12 */
@@ -23,6 +25,7 @@
 
 body {
   background-color: rgba(54, 54, 54, 0.856);
+  /* background-color: white; */
 }
 
 .main {
@@ -125,6 +128,7 @@ w100 {
   border-radius: 50%;
 }
 
+/* This is for flat borders */
 .bl {
   border-left: var(--bdr) var(--bc) calc(var(--bw) / 2);
 }
@@ -165,7 +169,83 @@ w100 {
   border-top-left-radius: 100px;
 }
 
-/* 
-* {
-  outline: solid salmon 1px;
+/* Parallax */
+.parallax-images {
+  padding: 10px;
+  display: block;
+  height: var(--content-height);
+  width: 100%;
+}
+
+.parallax-img {
+  overflow: hidden;
+  padding: 10px;
+  border: solid greenyellow 3px;
+  position: fixed;
+  top: 400px;
+  width: 100%;
+
+  background: url('images/generic-math.jpeg');
+  background-position: center; /* Center the image */
+  background-repeat: repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  transform: translateY(0px);
+  height: var(--content-height);
+  width: 100%;    
+}
+
+.img-math {
+  border: solid plum 2px;
+  background: url('images/generic-math.jpeg');
+  background-position: center; /* Center the image */
+  background-repeat: repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+  transform: translateY(0px);
+  height: var(--content-height);
+  width: 100%;  
+
+}
+
+.parallax-content {
+  position: relative;
+}
+
+/* @import url('https://fonts.googleapis.com/css?family=Markazi+Text|Raleway'); */
+
+
+/* body {
+  margin: 0;
 } */
+
+#parallax-container {
+  display: block;
+  height: 1000px;
+  width: 100%;
+}
+
+#parallax-container div {
+  position: fixed;
+  top: 0px;
+  background-position: center !important;
+  transform: translateY(0px);
+  height: 1000px;
+  width: 100%;
+}
+
+#content {
+  position: relative;
+  background-color: #030f33;
+  color: #ffffff;
+  padding: 100px;
+}
+
+#content h1 {
+  font-size: 100px;
+  text-align: center;
+  font-family: 'Markazi Text', serif;
+}
+
+#content p {
+  font-size: 18px;
+  font-family: 'Raleway', sans-serif;
+}
