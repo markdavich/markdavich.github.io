@@ -1,7 +1,9 @@
 
 :root {
   --gr-square: 0.61803398875;
+  --gr-min: 0.38196601125;
   --gr-rectangle: calc(1 - var(--gr-square));
+  --row-1-margin: calc(1vh - var(--gr-min));
 
   --main-width: 61.803398875vw;
   --gr-height: calc(var(--gr-square) * var(--main-width));
@@ -169,83 +171,124 @@ w100 {
   border-top-left-radius: 100px;
 }
 
-/* Parallax */
-.parallax-images {
-  padding: 10px;
-  display: block;
-  height: var(--content-height);
-  width: 100%;
-}
+.p-parent {
+  /* border: solid blue 3px; */
+  /* padding: 10px; */
+  font-family: monospace;
+  color: #424242;
 
-.parallax-img {
+/*   Fixed Height??? */
   overflow: hidden;
-  padding: 10px;
-  border: solid greenyellow 3px;
-  position: fixed;
-  top: 400px;
-  width: 100%;
-
-  background: url('images/generic-math.jpeg');
-  background-position: center; /* Center the image */
-  background-repeat: repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-  transform: translateY(0px);
-  height: var(--content-height);
-  width: 100%;    
-}
-
-.img-math {
-  border: solid plum 2px;
-  background: url('images/generic-math.jpeg');
-  background-position: center; /* Center the image */
-  background-repeat: repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
-  transform: translateY(0px);
-  height: var(--content-height);
-  width: 100%;  
-
-}
-
-.parallax-content {
+  height: 3000px;
+  
   position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: stretch;
 }
 
-/* @import url('https://fonts.googleapis.com/css?family=Markazi+Text|Raleway'); */
+.p-background {
+  /* border: solid red 10px; */
 
+/*   This could be an image */
+  /* background: repeating-linear-gradient(0deg, #3f87a6, #ebf8e1 2%, #f69d3c 2%); */
+  opacity: 0.10;
+  background-repeat: repeat-y;
+  background-size: contain;
+  background-position: top;
+  background-image: url('images/blue-gr-math.png');
 
-/* body {
-  margin: 0;
-} */
-
-#parallax-container {
-  display: block;
-  height: 1000px;
+  height: 5000px; /* This should be Fixed */
   width: 100%;
-}
-
-#parallax-container div {
-  position: fixed;
+  position: relative;
+  left: 0px;
   top: 0px;
-  background-position: center !important;
-  transform: translateY(0px);
-  height: 1000px;
-  width: 100%;
-}
-
-#content {
-  position: relative;
-  background-color: #030f33;
-  color: #ffffff;
-  padding: 100px;
-}
-
-#content h1 {
-  font-size: 100px;
+  bottom: 0px;
+  right: 0px;
   text-align: center;
-  font-family: 'Markazi Text', serif;
+  z-index: 1;
 }
 
-#content p {
-  font-size: 18px;
-  font-family: 'Raleway', sans-serif;
+.p-content {
+  /* border: solid yellow 1px; */
+  color: rgb(29, 29, 29);
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  bottom: 0px;
+  right: 0px;
+  /* background-color: rgb(124, 124, 124); */
+  z-index: 2;
+  /* margin: 25%; */
+}
+
+.img-cntr {
+  position: relative;
+}
+
+.img-main {
+  /* border: solid salmon 1px; */
+  width: 100%;
+  height: auto;
+  z-index: 1;
+  border-radius: 8px;
+  box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.397);
+  /* background-repeat: no-repeat;
+  position: relative; */
+}
+
+.img-inset {
+  /* border: solid black 1px; */
+  width: 25%;
+  top: 8px;
+  right: 23px;;
+  height: auto;
+  position: absolute;
+  z-index: 2;
+}
+
+.about {
+  margin-top: 23%;
+}
+
+.mark-d {
+  font-size: 4em;
+  /* transform: rotate(-90deg); */
+  font-family: 'Concert One';
+  color: rgba(255, 255, 255, 0.692);
+  z-index: 1;
+}
+
+.tag {
+  padding: 15px;
+  border-radius: 15px;
+  /* background-color: rgba(44, 44, 44, 0.082); */
+  /* box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.404); */
+  font-size: 2em;
+  /* transform: rotate(-90deg); */
+  font-family: monospace;
+  color: rgb(86, 160, 189);
+  z-index: 2;
+}
+
+.links {
+  padding: 15px;
+  border-radius: 15px;
+  /* background-color: rgba(44, 44, 44, 0.082); */
+  /* box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.404); */
+  font-size: 2.5em;
+  /* transform: rotate(-90deg); */
+  font-family: 'Concert One';
+  color: rgb(86, 160, 189);
+  z-index: 2;
+}
+
+.round {
+  color: rgb(56, 56, 56);
+  background-color: rgba(54, 54, 54, 0.383);
+  margin: 5px;
+  border-radius: 10px;
+  border: solid slategray 1px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.548);
 }
