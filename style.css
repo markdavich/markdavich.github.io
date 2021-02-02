@@ -19,6 +19,8 @@
   --bdr: solid;
 
   --content-height: 3000px;
+
+  --font-color: rgba(169, 231, 255, 0.712);
 }
 
 /* 8, 8, 12 */
@@ -291,4 +293,51 @@ w100 {
   border-radius: 10px;
   border: solid slategray 1px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.548);
+}
+
+.project-tile {
+  color: rgb(56, 56, 56);
+  background-color: rgba(54, 54, 54, 0.383);
+  margin: 5px;
+  border-radius: 10px;
+  border: solid slategray 1px;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.548);
+  padding: 10px;
+}
+
+.project-title {
+  color: var(--font-color);
+  font-size: 1.2em;
+  font-weight: bold;
+}
+
+.projct-preview {
+  width: 100% !important;
+  height: 75% !important;
+}
+
+.project-description {
+  color: var(--font-color);
+}
+
+/****General****/
+
+/****top bar/header/nav****/
+
+/****homepage****/
+
+/****pages*****/
+
+/****sidebar***/
+
+/****footer***/
+
+/****responsive***/
+@media screen and (min-width:1200px){
+
+}
+@media screen and (max-width:991px){
+  h1{
+    color:blue;
+  }
 }
